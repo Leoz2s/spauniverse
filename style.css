@@ -1,0 +1,147 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+
+  --bg-image-one: url(./assets/img/universe-1.png);
+  --bg-image-two: url(./assets/img/universe-2.png);
+  --bg-image-three: url(./assets/img/universe-3.png);
+  --fc-primary: #fff;
+  --fc-nav: hsl(240, 7%, 78%);
+  --fc-h1-p: hsla(240, 9%, 89%, 1);
+  --ff-primary: 'Roboto', sans-serif;
+}
+
+html {
+  background: var(--bg-image-one) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+html.universe {
+  background-image: var(--bg-image-two);
+}
+
+html.exploration {
+  background-image: var(--bg-image-three);
+}
+
+body {
+  color: var(--fc-primary);
+  font-family: var(--ff-primary);
+
+  min-height: 100vh;
+}
+
+a {
+  text-decoration: none;
+  color: var(--fc-primary);
+}
+
+/* Header */
+header {
+  padding: 4rem 7.2rem;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 3.2rem;
+
+  font-size: 2.4rem;
+  font-weight: 400;
+  color: var(--fc-nav);
+}
+
+nav a:hover {
+  font-weight: 700;
+  color: var(--fc-primary);
+}
+
+/* Main */
+html.home .main-box {
+  height: 65vh;
+
+  display: grid;
+  place-items: center;
+}
+
+html:not(.home) .main-box {
+  display: grid;
+  justify-content: start;
+
+  padding-left: 10.2rem;
+}
+
+main {
+  place-self: center;
+
+}
+
+html.home main {
+  display: grid;
+  justify-items: center;
+}
+
+main h1 {
+  color: var(--fc-h1-p);
+  font-size: 4.8rem;
+
+  margin-bottom: 1.6rem;
+}
+
+main button {
+  background: none;
+  border: 2px solid var(--fc-primary);
+  border-radius: .5rem;
+  padding: 1.2rem 3.2rem;
+
+  font-size: 1.4rem;
+  color: var(--fc-primary);
+  font-weight: 700;
+  text-transform: uppercase;
+
+  cursor: pointer;
+}
+
+main button:hover {
+  background-color: var(--fc-primary);
+}
+
+main button:hover p {
+  color: transparent;
+
+  background-image: url(./assets/img/universe-1.png);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+main button p {
+  width: fit-content;
+}
+
+main p {
+  color: var(--fc-h1-p);
+  font-size: 1.8rem;
+  line-height: 160%; /* 28.8px; */ 
+
+  width: 64.8rem;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 2rem;
+
+  font-size: 1rem;
+
+  position: fixed;
+  bottom: 0;
+  left: 45%;
+}
